@@ -4,13 +4,13 @@
 
 Atividade Integradora da Fase 1 do curso de Ciência da Computação — FIAP.
 
-O projeto simula a verificação de telemetria de uma espaçonave antes do 
-lançamento, utilizando dados derivados de um dataset real de consumo 
-energético (UCI Household Power Consumption) transformados para o contexto 
+O projeto simula a verificação de telemetria de uma espaçonave antes do
+lançamento, utilizando dados derivados de um dataset real de consumo
+energético (UCI Household Power Consumption) transformados para o contexto
 aeroespacial.
 
-**Aluno:** João Mariano da Silveira Peçanha  
-**RM:** 573434  
+**Aluno:** João Mariano da Silveira Peçanha
+**RM:** 573434
 
 ## Estrutura do Repositório
 ```
@@ -29,20 +29,20 @@ aeroespacial.
 
 1. Clone o repositório:
 ```bash
-   git clone https://github.com/[seu-usuario]/aurora-siger-fase01.git
+git clone https://github.com/JmCoding1304/aurora-siger-fase01.git
 ```
 2. Instale as dependências:
 ```bash
-   pip install pandas numpy matplotlib
+pip install pandas numpy matplotlib
 ```
 3. Abra o notebook:
 ```bash
-   jupyter notebook as-integrativa.ipynb
+jupyter notebook as-integrativa.ipynb
 ```
 4. Execute todas as células em ordem (Kernel → Restart & Run All)
 
-> **Nota:** O dataset original (household_power_consumption.txt) tem ~130MB 
-> e não está incluído no repositório. O notebook utiliza o dataset já 
+> **Nota:** O dataset original (household_power_consumption.txt) tem ~130MB
+> e não está incluído no repositório. O notebook utiliza o dataset já
 > processado (telemetry_aurora.csv) para execução rápida.
 
 ## Seções do Projeto
@@ -100,3 +100,4 @@ flowchart TD
 - Pandas / NumPy
 - Jupyter Notebook
 - Claude AI (Opus 4.6) — análise assistida
+- Dataset: [UCI Household Power Consumption](https://archive.ics.uci.edu/dataset/235/individual+household+electric+power+consumption)
