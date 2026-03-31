@@ -4,15 +4,13 @@
 
 Atividade Integradora da Fase 1 do curso de Ciência da Computação — FIAP.
 
-O projeto simula a verificação de telemetria de uma espaçonave antes do
-lançamento, utilizando dados derivados de um dataset real de consumo
-energético (UCI Household Power Consumption) transformados para o contexto
-aeroespacial.
+O projeto simula a verificação de telemetria de uma espaçonave antes do lançamento, utilizando dados derivados de um dataset real de consumo energético ([UCI Household Power Consumption](https://archive.ics.uci.edu/dataset/235/individual+household+electric+power+consumption)) transformados para o contexto aeroespacial.
 
 **Aluno:** João Mariano da Silveira Peçanha
 **RM:** 573434
 
 ## Estrutura do Repositório
+
 ```
 ├── as-integrativa.ipynb    # Notebook principal com toda a análise
 ├── telemetry_aurora.csv    # Dataset de telemetria gerado
@@ -28,22 +26,20 @@ aeroespacial.
 ## Como Executar
 
 1. Clone o repositório:
-```bash
-git clone https://github.com/JmCoding1304/aurora-siger-fase01.git
-```
+   ```bash
+   git clone https://github.com/JmCoding1304/aurora-siger-fase01.git
+   ```
 2. Instale as dependências:
-```bash
-pip install pandas numpy matplotlib
-```
+   ```bash
+   pip install pandas numpy matplotlib
+   ```
 3. Abra o notebook:
-```bash
-jupyter notebook as-integrativa.ipynb
-```
+   ```bash
+   jupyter notebook as-integrativa.ipynb
+   ```
 4. Execute todas as células em ordem (Kernel → Restart & Run All)
 
-> **Nota:** O dataset original (household_power_consumption.txt) tem ~130MB
-> e não está incluído no repositório. O notebook utiliza o dataset já
-> processado (telemetry_aurora.csv) para execução rápida.
+> **Nota:** O dataset original (`household_power_consumption.txt`) tem ~130MB e não está incluído no repositório. O notebook utiliza o dataset já processado (`telemetry_aurora.csv`) para execução rápida.
 
 ## Seções do Projeto
 
@@ -57,28 +53,10 @@ jupyter notebook as-integrativa.ipynb
 | 5.6 | Reflexão crítica (ética, impacto social, sustentabilidade) |
 
 ## Fluxograma do Algoritmo
-```mermaid
-flowchart TD
-    A["INÍCIO: Receber linha de telemetria"] --> B["alerts = lista vazia"]
-    B --> C{"Nível 1: Estrutural"}
-    C -->|"Falha"| C1["Adicionar alertas"]
-    C -->|"OK"| D
-    C1 --> D{"Nível 2: Propulsão"}
-    D -->|"Falha"| D1["Adicionar alertas"]
-    D -->|"OK"| E
-    D1 --> E{"Nível 3: Energia"}
-    E -->|"Falha"| E1["Adicionar alertas"]
-    E -->|"OK"| F
-    E1 --> F{"Nível 4: Térmico"}
-    F -->|"Falha"| F1["Adicionar alertas"]
-    F -->|"OK"| G
-    F1 --> G{"Nível 5: Carga"}
-    G -->|"Falha"| G1["Adicionar alertas"]
-    G -->|"OK"| H
-    G1 --> H{"alerts vazio?"}
-    H -->|"Sim"| I["PRONTO PARA DECOLAR"]
-    H -->|"Não"| J["DECOLAGEM ABORTADA"]
-```
+
+![Fluxograma do Algoritmo de Verificação de Lançamento](flowchart.png)
+
+O algoritmo verifica 5 níveis de subsistemas em sequência — **Estrutural → Propulsão → Energia → Térmico → Carga** — acumulando alertas ao longo do percurso. Se ao final não houver alertas, a espaçonave está **pronta para decolar**; caso contrário, a **decolagem é abortada**.
 
 ## Screenshots da Execução
 
@@ -100,4 +78,3 @@ flowchart TD
 - Pandas / NumPy
 - Jupyter Notebook
 - Claude AI (Opus 4.6) — análise assistida
-- Dataset: [UCI Household Power Consumption](https://archive.ics.uci.edu/dataset/235/individual+household+electric+power+consumption)
