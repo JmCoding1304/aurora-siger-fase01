@@ -11,7 +11,6 @@ aeroespacial.
 
 **Aluno:** João Mariano da Silveira Peçanha  
 **RM:** 573434  
-**Turma:** [sua turma]
 
 ## Estrutura do Repositório
 ```
