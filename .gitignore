@@ -1,0 +1,37 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+*.swp
+*.swo
+*~
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.py[cod]
+*.egg-info/
+dist/
+venv/
+.env
+
+# Large / class demo files (not needed in repo)
+household_power_consumption.txt
+telemetry_dataset.csv
+telemetry_anomalies.csv
+sensor_tables_preview*
+
+# Class materials
+aula01/
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Logs
+*.log
