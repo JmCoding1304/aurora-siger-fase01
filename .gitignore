@@ -20,6 +20,9 @@ dist/
 venv/
 .env
 
+# HTML export (intermediate for PDF)
+*.html
+
 # Large / class demo files (not needed in repo)
 household_power_consumption.txt
 telemetry_dataset.csv
